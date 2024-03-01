@@ -10,7 +10,7 @@ let rates = {
 	gleamingMeteorite: { usd: 0.06 },
 	flawlessMeteorite: { usd: 0.0125 },
 	autoBattle: { usd: 0.025 },
-    mythicalArtifcatEssence: { usd: 30 }
+    mythicalArtifactEssence: { usd: 30 }
 };
 
 function calcDiamondValue(quantity) {
@@ -68,6 +68,11 @@ function calcAbValue(quantity) {
 	return quantity * rates.autoBattle.usd;
 }
 
+function calcMythicalArtifactEssenceValue(quantity) {
+    console.log(`Calculating mae value...`);
+    return quantity * rates.mythicalArtifactEssence.usd;
+}
+
 export {
 	calcDiamondValue,
 	calcStaminaValue,
@@ -80,4 +85,5 @@ export {
 	calcSdValue,
 	calcLscValue,
 	calcAbValue,
+    calcMythicalArtifactEssenceValue
 };
