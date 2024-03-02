@@ -47,6 +47,7 @@ export default function LazyForm() {
 	const [mythicalArtifactEssenceCount, setMythicArtifactEssenceCount] =
 		useState(0);
 	const [noInput, setNoInput] = useState(true);
+	const [percentValue, setPercentValue] = useState(0);
 
 	const marginTop = {
 		marginTop: "20px",
@@ -136,19 +137,20 @@ export default function LazyForm() {
 			return
 		}
 
+		
 		let calculatedValue =
-			rscCalcValue +
-			diamondCalcValue +
-			staminaCalcValue +
-			goldCalcValue +
-			dscCalcValue +
-			ascCalcValue +
-			gmCalcValue +
-			fmCalcValue +
-			lscCalcValue +
-			sdCalcValue +
-			mythicalArtifactEssenceValue +
-			abCalcValue;
+		rscCalcValue +
+		diamondCalcValue +
+		staminaCalcValue +
+		goldCalcValue +
+		dscCalcValue +
+		ascCalcValue +
+		gmCalcValue +
+		fmCalcValue +
+		lscCalcValue +
+		sdCalcValue +
+		mythicalArtifactEssenceValue +
+		abCalcValue;
 
 		let resultsObj = {
 			rscCount: rscCount,

@@ -1,7 +1,7 @@
 const rates = {
 	diamond: { usd: 0.01 },
 	stamina: { usd: 0.003 },
-	gold: { usd: 0.00001 },
+	gold: { usd: 0.0000012 },
 	rareSummoningCrystal: { usd: 0.88 },
 	ancientSummoningCrystal: { usd: 4 },
 	divineSummoningCrystal: { usd: 8 },
