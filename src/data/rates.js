@@ -1,4 +1,4 @@
-let rates = {
+const rates = {
 	diamond: { usd: 0.01 },
 	stamina: { usd: 0.003 },
 	gold: { usd: 0.00001 },
@@ -85,5 +85,6 @@ export {
 	calcSdValue,
 	calcLscValue,
 	calcAbValue,
-    calcMythicalArtifactEssenceValue
+    calcMythicalArtifactEssenceValue,
+	rates
 };

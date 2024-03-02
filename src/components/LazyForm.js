@@ -11,10 +11,9 @@ import {
 	calcLscValue,
 	calcAbValue,
 	calcMythicalArtifactEssenceValue,
-} from "../data/rates";
-import Lottery_poster from "../resources/Lottery_poster.jpg";
+} from "../data/Rates";
+import Results from "./Results";
 
-import LazyInfo from "./LazyInfo";
 import { useState } from "react";
 export default function LazyForm() {
 	const [rscCalcValue, setRscCalcValue] = useState(0);
@@ -31,6 +30,23 @@ export default function LazyForm() {
 	const [packPrice, setPackPrice] = useState(0);
 	const [mythicalArtifactEssenceValue, setMythicArtifactEssenceValue] =
 		useState(0);
+	const [results, setResults] = useState({});
+	const [gotResults, setGotResults] = useState(false);
+
+	const [rscCount, setRscCount] = useState(0);
+	const [dscCount, setDscCount] = useState(0);
+	const [ascCount, setAscCount] = useState(0);
+	const [lscCount, setLscCount] = useState(0);
+	const [sdCount, setSdCount] = useState(0);
+	const [gmCount, setGmCount] = useState(0);
+	const [fmCount, setFmCount] = useState(0);
+	const [diamondCount, setDiamondCount] = useState(0);
+	const [staminaCount, setStaminaCount] = useState(0);
+	const [goldCount, setGoldCount] = useState(0);
+	const [abCount, setAbCount] = useState(0);
+	const [mythicalArtifactEssenceCount, setMythicArtifactEssenceCount] =
+		useState(0);
+	const [noInput, setNoInput] = useState(true);
 
 	const marginTop = {
 		marginTop: "20px",
@@ -45,44 +61,69 @@ export default function LazyForm() {
 		switch (e.target.id) {
 			case "rscInput":
 				setRscCalcValue(calcRscValue(e.target.value));
+				setRscCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "ascInput":
 				setAscCalcValue(calcAscValue(e.target.value));
+				setAscCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "dscInput":
 				setDscCalcValue(calcDscValue(e.target.value));
+				setDscCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "lscInput":
 				setLscCalcValue(calcLscValue(e.target.value));
+				setLscCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "sdInput":
 				setSdCalcValue(calcSdValue(e.target.value));
+				setSdCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "fmInput":
 				setFmCalcValue(calcFmValue(e.target.value));
+				setFmCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "gmInput":
 				setGmCalcValue(calcGmValue(e.target.value));
+				setGmCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "diamondInput":
 				setDiamondCalcValue(calcDiamondValue(e.target.value));
+				setDiamondCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "staminaInput":
 				setStaminaCalcValue(calcStaminaValue(e.target.value));
+				setStaminaCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "goldInput":
 				setGoldCalcValue(calcGoldValue(e.target.value));
+				setGoldCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "abInput":
 				setAbCalcValue(calcAbValue(e.target.value));
+				setAbCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "mythicalArtifactEssenceInput":
 				setMythicArtifactEssenceValue(
 					calcMythicalArtifactEssenceValue(e.target.value)
 				);
+				setMythicArtifactEssenceCount(e.target.value);
+				setNoInput(false);
 				break;
 			case "packPriceInput":
 				setPackPrice(e.target.value);
+				setNoInput(false);
 				break;
 			default:
 				break;
@@ -90,6 +131,11 @@ export default function LazyForm() {
 	}
 
 	function evaluateValue() {
+		if (noInput) {
+			alert("Please fill out the form before submitting...");
+			return
+		}
+
 		let calculatedValue =
 			rscCalcValue +
 			diamondCalcValue +
@@ -103,12 +149,38 @@ export default function LazyForm() {
 			sdCalcValue +
 			mythicalArtifactEssenceValue +
 			abCalcValue;
-		console.log(calculatedValue);
-		if (calculatedValue > packPrice) {
-			alert(`Good Deal!`);
-		} else {
-			alert(`Not a good Deal`);
-		}
+
+		let resultsObj = {
+			rscCount: rscCount,
+			ascCount: ascCount,
+			dscCount: dscCount,
+			gmCount: gmCount,
+			diamondCount: diamondCount,
+			staminaCount: staminaCount,
+			goldCount: goldCount,
+			fmCount: fmCount,
+			lscCount: lscCount,
+			sdCount: sdCount,
+			mythicalArtifactEssenceCount: mythicalArtifactEssenceCount,
+			abCount: abCount,
+			trueValue: calculatedValue,
+			inGamePrice: packPrice,
+			calculatedValue: calculatedValue,
+			rscCalcValue: rscCalcValue,
+			diamondCalcValue: diamondCalcValue,
+			staminaCalcValue: staminaCalcValue,
+			goldCalcValue: goldCalcValue,
+			dscCalcValue: dscCalcValue,
+			ascCalcValue: ascCalcValue,
+			gmCalcValue: gmCalcValue,
+			fmCalcValue: fmCalcValue,
+			lscCalcValue: lscCalcValue,
+			sdCalcValue: sdCalcValue,
+			mythicalArtifactEssenceValue: mythicalArtifactEssenceValue,
+			abCalcValue: abCalcValue,
+		};
+		setResults(resultsObj);
+		setGotResults(true);
 	}
 
 	function clear() {
@@ -116,6 +188,20 @@ export default function LazyForm() {
 		for (let input of inputs) {
 			input.value = "";
 		}
+		setGotResults(false);
+		setRscCount(0);
+		setDscCount(0);
+		setAscCount(0);
+		setLscCount(0);
+		setSdCount(0);
+		setGmCount(0);
+		setFmCount(0);
+		setDiamondCount(0);
+		setStaminaCount(0);
+		setGoldCount(0);
+		setAbCount(0);
+		setMythicArtifactEssenceCount(0);
+		setNoInput(true);
 	}
 
 	return (
@@ -188,7 +274,7 @@ export default function LazyForm() {
 
 					<div className='col'>
 						<span className='float-start' style={{ marginRight: "10px" }}>
-							Skill Dust
+							Legendary Skill Dust
 						</span>
 						<input
 							className='float-end'
@@ -223,16 +309,15 @@ export default function LazyForm() {
 							onChange={handleValueUpdate}
 						/>
 					</div>
-
 					<div className='col'>
 						<span className='float-start' style={{ marginRight: "10px" }}>
-							Diamonds
+							Mythical Artifact Essence
 						</span>
 						<input
 							className='float-end'
-							id='diamondInput'
-							type='text'
+							id='mythicalArtifactEssenceInput'
 							onChange={handleValueUpdate}
+							type='text'
 						/>
 					</div>
 				</div>
@@ -264,13 +349,13 @@ export default function LazyForm() {
 
 					<div className='col'>
 						<span className='float-start' style={{ marginRight: "10px" }}>
-							Mythical Artifact Essence
+							Diamonds
 						</span>
 						<input
 							className='float-end'
-							id='mythicalArtifactEssenceInput'
-							onChange={handleValueUpdate}
+							id='diamondInput'
 							type='text'
+							onChange={handleValueUpdate}
 						/>
 					</div>
 				</div>
@@ -299,6 +384,8 @@ export default function LazyForm() {
 					</div>
 				</div>
 			</div>
+
+			{gotResults && <Results results={results} />}
 		</>
 	);
 }
