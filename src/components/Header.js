@@ -1,20 +1,11 @@
-import fastidious_profile_picture_blue from "../resources/fastidious_profile_picture_blue.png"
+import banner from "../resources/calculator_banner_TN_for_jake.png"
 
 export default function Header() {
-	const style = {
-		backgroundColor: '#60ACF7'
-	}
+
 	return (
 		<>
-			<nav className='navbar' style={style}>
-				<div className='container-fluid'>
-					<a className='navbar-brand' href='#'>
-						<div className='d-inline-flex align-text-center gap-3'>
-							<img src={fastidious_profile_picture_blue} alt='Bootstrap' width={40} height={40}/>
-							<h2 className="ml-auto">WoR True Pack Value Calculator</h2> 
-						</div>
-					</a>
-				</div>
+			<nav className='navbar'>
+				<img src={banner} class="container-fluid" alt="Responsive image" />
 			</nav>
 		</>
 	);

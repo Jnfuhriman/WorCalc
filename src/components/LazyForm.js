@@ -210,6 +210,7 @@ export default function LazyForm() {
 
 	return (
 		<>
+			<hr />
 			<div className='main container-md' style={marginTop}>
 				{/* <img className='rounded mx-auto d-block' src={Lottery_poster} alt='lottery' width={400} /> */}
 
