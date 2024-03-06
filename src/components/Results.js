@@ -64,7 +64,7 @@ export default function Results(props) {
 							In game price is <strong>{percentValue}%</strong> overvalued
 						</span>
 					)}
-					{results.inGamePrice == results.trueValue && (
+					{results.inGamePrice === results.trueValue && (
 						<span
 							className='col'
 							style={{
