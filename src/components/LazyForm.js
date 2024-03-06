@@ -130,13 +130,12 @@ export default function LazyForm() {
 				break;
 		}
 	}
-
+	
 	function evaluateValue() {
 		if (noInput) {
 			alert("Please fill out the form before submitting...");
 			return
 		}
-
 		
 		let calculatedValue =
 		rscCalcValue +
@@ -167,7 +166,6 @@ export default function LazyForm() {
 			abCount: abCount,
 			trueValue: calculatedValue,
 			inGamePrice: packPrice,
-			calculatedValue: calculatedValue,
 			rscCalcValue: rscCalcValue,
 			diamondCalcValue: diamondCalcValue,
 			staminaCalcValue: staminaCalcValue,

@@ -1,12 +1,27 @@
 import { rates } from "../data/Rates";
+import { useEffect, useState } from "react";
 
 export default function Results(props) {
 	const results = props.results;
+	const [percentValue, setPercentValue] = useState(0);
 
 	let USDollar = new Intl.NumberFormat("en-US", {
 		style: "currency",
 		currency: "USD",
 	});
+
+	useEffect(() => {
+		calculateValue();
+	});
+
+	function calculateValue() {
+		let value = Math.round(
+			Math.abs(
+				((results.trueValue - results.inGamePrice) / results.inGamePrice) * 100
+			)
+		);
+		setPercentValue(value);
+	}
 
 	return (
 		<>
@@ -21,6 +36,37 @@ export default function Results(props) {
 					</span>
 				</div>
 			</div>
+			<div className='row md-5'>
+				<div className='col-3 mx-auto'>
+					{results.inGamePrice < results.trueValue && (
+						<span
+							className='col'
+							style={{
+								marginLeft: 10,
+								backgroundColor: "#66FF99",
+								borderRadius: 10,
+								padding: 5
+							}}
+						>
+							In game price is <strong>{percentValue}%</strong> undervalued
+						</span>
+					)}
+					{results.inGamePrice > results.trueValue && (
+						<span
+							className='col'
+							style={{
+								marginLeft: 10,
+								backgroundColor: "#FFCCCB",
+								borderRadius: 10,
+								padding: 5
+							}}
+						>
+							In game price is <strong>{percentValue}%</strong> overvalued
+						</span>
+					)}
+				</div>
+			</div>
+
 			<table className='table mx-auto' style={{ width: 1000 }}>
 				<thead>
 					<tr>
