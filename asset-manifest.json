@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/WorCalc/static/css/main.3d85d988.css",
-    "main.js": "/WorCalc/static/js/main.f748c151.js",
+    "main.js": "/WorCalc/static/js/main.e6e9e2cc.js",
     "static/js/453.709dc2fc.chunk.js": "/WorCalc/static/js/453.709dc2fc.chunk.js",
     "static/media/fastidious_profile_picture_blue.png": "/WorCalc/static/media/fastidious_profile_picture_blue.b2aa6763444e7ea14f61.png",
     "index.html": "/WorCalc/index.html",
     "main.3d85d988.css.map": "/WorCalc/static/css/main.3d85d988.css.map",
-    "main.f748c151.js.map": "/WorCalc/static/js/main.f748c151.js.map",
+    "main.e6e9e2cc.js.map": "/WorCalc/static/js/main.e6e9e2cc.js.map",
     "453.709dc2fc.chunk.js.map": "/WorCalc/static/js/453.709dc2fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3d85d988.css",
-    "static/js/main.f748c151.js"
+    "static/js/main.e6e9e2cc.js"
   ]
 }
