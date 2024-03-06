@@ -47,7 +47,6 @@ export default function LazyForm() {
 	const [mythicalArtifactEssenceCount, setMythicArtifactEssenceCount] =
 		useState(0);
 	const [noInput, setNoInput] = useState(true);
-	const [percentValue, setPercentValue] = useState(0);
 
 	const marginTop = {
 		marginTop: "20px",
@@ -61,69 +60,69 @@ export default function LazyForm() {
 	function handleValueUpdate(e) {
 		switch (e.target.id) {
 			case "rscInput":
-				setRscCalcValue(calcRscValue(e.target.value));
-				setRscCount(e.target.value);
+				setRscCalcValue(calcRscValue(Math.abs(e.target.value)));
+				setRscCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "ascInput":
-				setAscCalcValue(calcAscValue(e.target.value));
-				setAscCount(e.target.value);
+				setAscCalcValue(calcAscValue(Math.abs(e.target.value)));
+				setAscCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "dscInput":
-				setDscCalcValue(calcDscValue(e.target.value));
-				setDscCount(e.target.value);
+				setDscCalcValue(calcDscValue(Math.abs(e.target.value)));
+				setDscCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "lscInput":
-				setLscCalcValue(calcLscValue(e.target.value));
-				setLscCount(e.target.value);
+				setLscCalcValue(calcLscValue(Math.abs(e.target.value)));
+				setLscCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "sdInput":
-				setSdCalcValue(calcSdValue(e.target.value));
-				setSdCount(e.target.value);
+				setSdCalcValue(calcSdValue(Math.abs(e.target.value)));
+				setSdCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "fmInput":
-				setFmCalcValue(calcFmValue(e.target.value));
-				setFmCount(e.target.value);
+				setFmCalcValue(calcFmValue(Math.abs(e.target.value)));
+				setFmCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "gmInput":
-				setGmCalcValue(calcGmValue(e.target.value));
-				setGmCount(e.target.value);
+				setGmCalcValue(calcGmValue(Math.abs(e.target.value)));
+				setGmCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "diamondInput":
-				setDiamondCalcValue(calcDiamondValue(e.target.value));
-				setDiamondCount(e.target.value);
+				setDiamondCalcValue(calcDiamondValue(Math.abs(e.target.value)));
+				setDiamondCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "staminaInput":
-				setStaminaCalcValue(calcStaminaValue(e.target.value));
-				setStaminaCount(e.target.value);
+				setStaminaCalcValue(calcStaminaValue(Math.abs(e.target.value)));
+				setStaminaCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "goldInput":
-				setGoldCalcValue(calcGoldValue(e.target.value));
-				setGoldCount(e.target.value);
+				setGoldCalcValue(calcGoldValue(Math.abs(e.target.value)));
+				setGoldCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "abInput":
-				setAbCalcValue(calcAbValue(e.target.value));
-				setAbCount(e.target.value);
+				setAbCalcValue(calcAbValue(Math.abs(e.target.value)));
+				setAbCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "mythicalArtifactEssenceInput":
 				setMythicArtifactEssenceValue(
-					calcMythicalArtifactEssenceValue(e.target.value)
+					calcMythicalArtifactEssenceValue(Math.abs(e.target.value))
 				);
-				setMythicArtifactEssenceCount(e.target.value);
+				setMythicArtifactEssenceCount(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			case "packPriceInput":
-				setPackPrice(e.target.value);
+				setPackPrice(Math.abs(e.target.value));
 				setNoInput(false);
 				break;
 			default:
@@ -134,6 +133,10 @@ export default function LazyForm() {
 	function evaluateValue() {
 		if (noInput) {
 			alert("Please fill out the form before submitting...");
+			return
+		}
+		if (packPrice === 0) {
+			alert("Please enter a pack price before submitting...");
 			return
 		}
 		
@@ -201,6 +204,7 @@ export default function LazyForm() {
 		setGoldCount(0);
 		setAbCount(0);
 		setMythicArtifactEssenceCount(0);
+		setPackPrice(0);
 		setNoInput(true);
 	}
 

@@ -45,7 +45,7 @@ export default function Results(props) {
 								marginLeft: 10,
 								backgroundColor: "#66FF99",
 								borderRadius: 10,
-								padding: 5
+								padding: 5,
 							}}
 						>
 							In game price is <strong>{percentValue}%</strong> undervalued
@@ -58,11 +58,21 @@ export default function Results(props) {
 								marginLeft: 10,
 								backgroundColor: "#FFCCCB",
 								borderRadius: 10,
-								padding: 5
+								padding: 5,
 							}}
 						>
 							In game price is <strong>{percentValue}%</strong> overvalued
 						</span>
+					)}
+					{results.inGamePrice == results.trueValue && (
+						<span
+							className='col'
+							style={{
+								marginLeft: 10,
+								borderRadius: 10,
+								padding: 5,
+							}}
+						>Values are equal</span>
 					)}
 				</div>
 			</div>
