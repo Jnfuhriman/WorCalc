@@ -129,30 +129,30 @@ export default function LazyForm() {
 				break;
 		}
 	}
-	
+
 	function evaluateValue() {
 		if (noInput) {
 			alert("Please fill out the form before submitting...");
-			return
+			return;
 		}
 		if (packPrice === 0) {
 			alert("Please enter a pack price before submitting...");
-			return
+			return;
 		}
-		
+
 		let calculatedValue =
-		rscCalcValue +
-		diamondCalcValue +
-		staminaCalcValue +
-		goldCalcValue +
-		dscCalcValue +
-		ascCalcValue +
-		gmCalcValue +
-		fmCalcValue +
-		lscCalcValue +
-		sdCalcValue +
-		mythicalArtifactEssenceValue +
-		abCalcValue;
+			rscCalcValue +
+			diamondCalcValue +
+			staminaCalcValue +
+			goldCalcValue +
+			dscCalcValue +
+			ascCalcValue +
+			gmCalcValue +
+			fmCalcValue +
+			lscCalcValue +
+			sdCalcValue +
+			mythicalArtifactEssenceValue +
+			abCalcValue;
 
 		let resultsObj = {
 			rscCount: rscCount,
@@ -211,10 +211,8 @@ export default function LazyForm() {
 	return (
 		<>
 			<hr />
-			<div className='main container-md' style={marginTop}>
-				{/* <img className='rounded mx-auto d-block' src={Lottery_poster} alt='lottery' width={400} /> */}
-
-				<div className='row gap-3' style={marginTop}>
+			<div className='main container-fluid fs-5' style={{ padding: 50 }}>
+				<div className='row gap-3'>
 					<div className='col'>
 						<span className='float-start' style={{ marginRight: "10px" }}>
 							Rare Summoning Crystal
@@ -366,8 +364,8 @@ export default function LazyForm() {
 				</div>
 
 				<hr />
-				<div className='row md-1 gap-3' style={marginTop}>
-					<div className='grid col-5 mx-auto'>
+				<div className='row gap-3' style={marginTop}>
+					<div className='grid col-4 mx-auto'>
 						<span style={{ marginRight: "10px" }}>In-Game Pack Price</span>
 						<input
 							id='packPriceInput'
@@ -379,11 +377,11 @@ export default function LazyForm() {
 				</div>
 
 				<div className='row md-1 gap-3' style={marginTop}>
-					<div className='grid col-3 mx-auto'>
-						<button className='col btn' style={btn} onClick={evaluateValue}>
+					<div className='grid col-2 mx-auto'>
+						<button className='col btn btn-lg' style={btn} onClick={evaluateValue}>
 							Evaluate
 						</button>
-						<button className='col btn btn-info' style={btn} onClick={clear}>
+						<button className='col btn btn-lg' style={btn} onClick={clear}>
 							Clear
 						</button>
 					</div>

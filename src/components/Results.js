@@ -27,7 +27,7 @@ export default function Results(props) {
 		<>
 			<hr />
 			<div className='row md-5 gap-3'>
-				<div className='grid col-4 mx-auto'>
+				<div className='grid col-3 mx-auto'>
 					<span className='col' style={{ marginRight: 10 }}>
 						True Pack Price: {USDollar.format(results.trueValue)}
 					</span>
@@ -37,7 +37,7 @@ export default function Results(props) {
 				</div>
 			</div>
 			<div className='row md-5'>
-				<div className='col-3 mx-auto'>
+				<div className='col-2 mx-auto' style={{ marginTop: "20px" }}>
 					{results.inGamePrice < results.trueValue && (
 						<span
 							className='col'
@@ -72,7 +72,9 @@ export default function Results(props) {
 								borderRadius: 10,
 								padding: 5,
 							}}
-						>Values are equal</span>
+						>
+							Values are equal
+						</span>
 					)}
 				</div>
 			</div>
