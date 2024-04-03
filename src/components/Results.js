@@ -40,7 +40,7 @@ export default function Results(props) {
 				<div className='col-2 mx-auto' style={{ marginTop: "20px" }}>
 					{results.inGamePrice < results.trueValue && (
 						<span
-							className='col'
+							className='col-2'
 							style={{
 								marginLeft: 10,
 								backgroundColor: "#66FF99",
@@ -53,7 +53,7 @@ export default function Results(props) {
 					)}
 					{results.inGamePrice > results.trueValue && (
 						<span
-							className='col'
+							className='col-2'
 							style={{
 								marginLeft: 10,
 								backgroundColor: "#FFCCCB",
@@ -66,7 +66,7 @@ export default function Results(props) {
 					)}
 					{results.inGamePrice === results.trueValue && (
 						<span
-							className='col'
+							className='col-2'
 							style={{
 								marginLeft: 10,
 								borderRadius: 10,

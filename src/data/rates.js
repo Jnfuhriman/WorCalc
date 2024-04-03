@@ -13,6 +13,21 @@ const rates = {
     mythicalArtifactEssence: { usd: 30 }
 };
 
+const ratesArr = [
+	{ usd: 0.01, label: 'Diamond' },
+	{ usd: 0.003, label: 'Stamina' },
+	{ usd: 0.0000012, label: 'Gold' },
+	{ usd: 0.88, label: 'Rare Summoning Crystal' },
+	{ usd: 4, label: 'Ancient Summoning Crystal' },
+	{ usd: 8, label: 'Divine Summoning Crystal' },
+	{ usd: 5, label: 'Legendary Skill Crystal' },
+	{ usd: 0.025, label: 'Legendary Skill Dust'},
+	{ usd: 0.06, label: 'Gleaming Meteorite' },
+	{ usd: 0.0125, label: 'Flawless Meteorite' },
+	{ usd: 0.025, label: 'Auto Battle' },
+	{ usd: 30, label: 'Mythical Artifact Essence' }
+];
+
 function calcDiamondValue(quantity) {
 	console.log(`Calculating diamond value...`);
 	return quantity * rates.diamond.usd;
@@ -86,5 +101,6 @@ export {
 	calcLscValue,
 	calcAbValue,
     calcMythicalArtifactEssenceValue,
-	rates
+	rates,
+	ratesArr
 };
