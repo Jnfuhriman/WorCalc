@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/WorCalc/static/css/main.3d85d988.css",
-    "main.js": "/WorCalc/static/js/main.cf02ecb4.js",
+    "main.css": "/WorCalc/static/css/main.ba56bb7f.css",
+    "main.js": "/WorCalc/static/js/main.c0e2b401.js",
     "static/js/453.709dc2fc.chunk.js": "/WorCalc/static/js/453.709dc2fc.chunk.js",
     "static/media/calculator_banner_TN_for_jake.png": "/WorCalc/static/media/calculator_banner_TN_for_jake.ec0aec4083ea02533488.png",
     "index.html": "/WorCalc/index.html",
-    "main.3d85d988.css.map": "/WorCalc/static/css/main.3d85d988.css.map",
-    "main.cf02ecb4.js.map": "/WorCalc/static/js/main.cf02ecb4.js.map",
+    "main.ba56bb7f.css.map": "/WorCalc/static/css/main.ba56bb7f.css.map",
+    "main.c0e2b401.js.map": "/WorCalc/static/js/main.c0e2b401.js.map",
     "453.709dc2fc.chunk.js.map": "/WorCalc/static/js/453.709dc2fc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d85d988.css",
-    "static/js/main.cf02ecb4.js"
+    "static/css/main.ba56bb7f.css",
+    "static/js/main.c0e2b401.js"
   ]
 }
