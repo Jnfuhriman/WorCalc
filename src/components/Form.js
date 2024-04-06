@@ -62,7 +62,7 @@ function Form() {
 			alert("Please enter a pack price before submitting...");
 			return;
 		}
-		let calculatedValue =
+		var calculatedValue =
 			rareSummoningCrystalValue +
 			ancientSummoningCrystalValue +
 			divineSummoningCrystalValue +
@@ -115,18 +115,31 @@ function Form() {
 		}
 		setGotResults(false);
 		setRareSummoningCrystal(0);
+		setRareSummoningCrystalValue(0);
 		setDivineSummoningCrystal(0);
+		setDivineSummoningCrystalValue(0);
 		setAncientSummoningCrystal(0);
+		setAncientSummoningCrystalValue(0);
 		setLegendarySkillCrystal(0);
+		setLegendarySkillCrystalValue(0);
 		setSkillDust(0);
+		setSkillDustValue(0);
 		setGleamingMeteorite(0);
+		setGleamingMeteoriteValue(0);
+		setFlawlessMeteorite(0);
 		setFlawlessMeteorite(0);
 		setDiamond(0);
+		setDiamondValue(0);
 		setStamina(0);
+		setStaminaValue(0);
 		setGold(0);
+		setGoldValue(0);
 		setAutoBattle(0);
+		setAutoBattleValue(0);
+		setMythicalArtifactEssence(0);
 		setMythicalArtifactEssence(0);
 		setPackPrice(0);
+		setResults(null);
 		setNoInput(true);
 	}
 
