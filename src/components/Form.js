@@ -226,9 +226,10 @@ function Form() {
 	return (
 		<>
 			{/* form */}
-			<h4 style={{ marginTop: "5%", marginBottom: "5%", marginLeft: "7%" }}>
-				Enter amount of resources (at least one). Don't have to fill in every
-				field, just those that are in the pack you're interested in.
+			<h4 style={{ marginTop: "5%", marginBottom: "5%", marginLeft: "7%", marginRight:"7%" }}>
+				Enter the amount of each resource featured in the pack. You do not have
+				to fill in each field - just the ones corresponding to the featured
+				items in the pack you are evaluating.
 			</h4>
 			<div className='justify-content-center' style={{ display: "flex" }}>
 				{/* left side */}
