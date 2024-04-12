@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WorCalc/static/css/main.258d8f48.css",
-    "main.js": "/WorCalc/static/js/main.153d7520.js",
+    "main.js": "/WorCalc/static/js/main.6eb8dec1.js",
     "static/js/453.709dc2fc.chunk.js": "/WorCalc/static/js/453.709dc2fc.chunk.js",
     "static/media/packprice.webp": "/WorCalc/static/media/packprice.c00e20c63a903a979655.webp",
     "static/media/gleaming meteorite.webp": "/WorCalc/static/media/gleaming meteorite.bac8edbc53f78675917e.webp",
@@ -18,11 +18,11 @@
     "static/media/stamina.webp": "/WorCalc/static/media/stamina.8a5ab2a0318b940e51db.webp",
     "index.html": "/WorCalc/index.html",
     "main.258d8f48.css.map": "/WorCalc/static/css/main.258d8f48.css.map",
-    "main.153d7520.js.map": "/WorCalc/static/js/main.153d7520.js.map",
+    "main.6eb8dec1.js.map": "/WorCalc/static/js/main.6eb8dec1.js.map",
     "453.709dc2fc.chunk.js.map": "/WorCalc/static/js/453.709dc2fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.258d8f48.css",
-    "static/js/main.153d7520.js"
+    "static/js/main.6eb8dec1.js"
   ]
 }
