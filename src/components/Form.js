@@ -16,6 +16,7 @@ import {
 	calcMythicalArtifactEssenceValue,
 } from "../data/Rates.js";
 import FormElement from "./FormElement.js";
+import packPriceImg from "../resources/packprice.webp";
 
 function Form() {
 	let data = ratesArr;
@@ -56,10 +57,6 @@ function Form() {
 	function evaluate() {
 		if (noInput) {
 			alert("Please fill out the form before submitting...");
-			return;
-		}
-		if (packPrice === 0) {
-			alert("Please enter a pack price before submitting...");
 			return;
 		}
 		var calculatedValue =
@@ -228,7 +225,84 @@ function Form() {
 	//content
 	return (
 		<>
-			<div className='formContent'>{formElementsList}</div>
+			{/* form */}
+			<h4 style={{ marginTop: "5%", marginBottom: "5%", marginLeft: "7%" }}>
+				Enter amount of resources (at least one). Don't have to fill in every
+				field, just those that are in the pack you're interested in.
+			</h4>
+			<div className='justify-content-center' style={{ display: "flex" }}>
+				{/* left side */}
+				<div
+					className='inputs col-8'
+					style={{
+						marginLeft: "5%",
+						display: "flex",
+						flexWrap: "wrap",
+						justifyContent: "space-around",
+					}}
+				>
+					{formElementsList}
+				</div>
+				{/* right side */}
+				<div className='col-4 col-sm-2'>
+					<div
+						style={{ display: "flex", flexDirection: "column", width: "50%" }}
+					>
+						<img
+							className='align-self-center'
+							style={{ scale: "80%" }}
+							src={packPriceImg}
+							alt=''
+						/>
+						<label
+							className='requiredInput'
+							style={{ marginBottom: "3%" }}
+							htmlFor='packPrice'
+						>
+							In game pack price (USD)
+						</label>
+						<input
+							required='true'
+							style={{
+								marginBottom: "5%",
+								color: "white",
+								textAlign: "center",
+							}}
+							className='inputElement'
+							id='packPrice'
+							onChange={handleElementEvent}
+							type='text'
+						/>
+					</div>
+					<hr style={{ width: "50%" }} />
+					<div
+						style={{ display: "flex", flexDirection: "column", width: "50%" }}
+					>
+						<button
+							className='btn d-grid gap-2 d-md-block'
+							style={{
+								fontSize: "0.80em",
+								textAlign: "center",
+								borderRadius: "25px",
+								marginBottom: "5%",
+								backgroundColor: "#60ACF7",
+							}}
+							onClick={evaluate}
+						>
+							Evaluate
+						</button>
+						<button
+							className='btn'
+							style={{ backgroundColor: "#2a1e1b", color: "white" }}
+							onClick={clear}
+						>
+							Clear
+						</button>
+					</div>
+				</div>
+			</div>
+			<hr />
+			{/* <div className='formContent'>{formElementsList}</div>
 			<hr />
 			<div className='container text-center'>
 				<div className='col justify-content-start'>
@@ -262,7 +336,7 @@ function Form() {
 						Clear
 					</button>
 				</div>
-			</div>
+			</div> */}
 			{gotResults && <Results results={results} />}
 		</>
 	);

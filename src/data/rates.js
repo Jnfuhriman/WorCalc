@@ -14,18 +14,18 @@ const rates = {
 };
 
 const ratesArr = [
-	{ usd: 0.01, label: 'Diamond' },
-	{ usd: 0.003, label: 'Stamina' },
-	{ usd: 0.0000012, label: 'Gold' },
-	{ usd: 0.88, label: 'Rare Summoning Crystal' },
-	{ usd: 4, label: 'Ancient Summoning Crystal' },
-	{ usd: 8, label: 'Divine Summoning Crystal' },
-	{ usd: 5, label: 'Legendary Skill Crystal' },
-	{ usd: 0.025, label: 'Legendary Skill Dust'},
-	{ usd: 0.06, label: 'Gleaming Meteorite' },
-	{ usd: 0.0125, label: 'Flawless Meteorite' },
-	{ usd: 0.025, label: 'Auto Battle' },
-	{ usd: 30, label: 'Mythical Artifact Essence' }
+	{ usd: 0.01, label: 'Diamond', img: 'diamond.webp' },
+	{ usd: 0.003, label: 'Stamina', img: 'stamina.webp' },
+	{ usd: 0.0000012, label: 'Gold', img: 'gold.webp' },
+	{ usd: 0.88, label: 'Rare Summoning Crystal', img: 'rare summoning crystal.webp' },
+	{ usd: 4, label: 'Ancient Summoning Crystal', img: 'ancient summoning crystal.webp' },
+	{ usd: 8, label: 'Divine Summoning Crystal', img: 'divine summoning crystal.webp' },
+	{ usd: 5, label: 'Legendary Skill Crystal', img: 'legendary skill crystal.webp' },
+	{ usd: 0.025, label: 'Legendary Skill Dust', img: 'legendary skill dust.webp' },
+	{ usd: 0.06, label: 'Gleaming Meteorite', img: 'gleaming meteorite.webp' },
+	{ usd: 0.0125, label: 'Flawless Meteorite', img: 'flawless meteorite' },
+	{ usd: 0.025, label: 'Auto Battle', img: 'auto battle.webp' },
+	{ usd: 30, label: 'Mythical Artifact Essence', img: 'mythical artifact essence.webp' }
 ];
 
 function calcDiamondValue(quantity) {
