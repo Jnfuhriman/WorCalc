@@ -229,8 +229,9 @@ function Form() {
 			<h4 style={{ marginTop: "5%", marginBottom: "5%", marginLeft: "7%", marginRight:"7%" }}>
 				Enter the amount of each resource featured in the pack. You do not have
 				to fill in each field - just the ones corresponding to the featured
-				items in the pack you are evaluating.
-			</h4>
+				items in the pack you are evaluating. <span style={{fontWeight:"10%"}}><i>Prices are evaluated in USD ($1 USD = 100 W-Gold)<br />If you choose to spend, please do so responsibly #withinyourmeans</i></span>
+			</h4>			
+
 			<div className='justify-content-center' style={{ display: "flex" }}>
 				{/* left side */}
 				<div
@@ -262,7 +263,7 @@ function Form() {
 						>
 							In game pack price (USD)
 						</label>
-						<input
+						<input placeholder="00.00"
 							required='true'
 							style={{
 								marginBottom: "5%",

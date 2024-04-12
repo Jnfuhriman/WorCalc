@@ -85,7 +85,7 @@ function FormElement({ label, onUpdate }) {
 					className='inputElement'
 					onChange={onUpdate}
 					id={label}
-					type='text'
+					type='number'
 				/>
 			</div>
 		</div>
